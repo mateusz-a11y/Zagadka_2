@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Czarna strona</title>
+  <meta name="hidden-code" content="81 652" />
+
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+      color: #000; /* tekst również czarny, żeby nie był widoczny */
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    .hidden-corner {
+      position: fixed;
+      right: 8px;
+      bottom: 8px;
+      color: #000;       
+      user-select: none; 
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      pointer-events: none;
+      font-size: 12px;
+      line-height: 1;
+      z-index: 2147483647;    
+      opacity: 1;        
+    }
+
+    ::selection { background: transparent; }
+  </style>
+</head>
+<body>
+  <div aria-hidden="true"></div>
+
+  <span class="hidden-corner" aria-hidden="true" tabindex="-1">81 652</span>
+</body>
+</html>
